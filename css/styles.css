@@ -27,18 +27,6 @@ html{
     background-color: var(--coloruno);
 }
 
-body::-webkit-scrollbar{
-    width: 12px;
-    background-color: var(--colordos);
-}
-
-body::-webkit-scrollbar-thumb{
-    background-color: var(--coloruno);
-    border-radius: 10px;
-    border: solid 3px var(--colordos);
-}
-
-
 /*-------------CONTENIDO DE LA PARTE SUPERIOR DE LA WEB------------------------------------------------*/
 
 
