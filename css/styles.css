@@ -30,6 +30,7 @@ html{
 body{
     overflow: overlay;
 }
+
 ::-webkit-scrollbar{
     width: 12px;
     background-color: transparent;
