@@ -1,8 +1,7 @@
 window.sr = ScrollReveal();
 
-    sr.reveal('.section__about, .section__skills, .section__proyecto, .section__formulario, .section__linea', {
+    sr.reveal('.about__informacion, .about__avatar, .section__skills, .proyecto__titulo, .proyecto__cards, .section__formulario', {
         duration: 2000,
         origin: 'bottom',
         distance: '100px',
-        delay: 30
     });

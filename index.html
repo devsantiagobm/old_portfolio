@@ -190,14 +190,18 @@
             <form class="section__contacto"  action="https://formspree.io/f/mdobojop" method="POST">
                 <div class="contacto__formulario">
                     <h2 class="contacto__titulo">Contáctame</h2>
-                    <input class="contacto__input contacto__input--nombre" type="text" placeholder="Nombre" name="name">
-                    <input class="contacto__input contacto__input--correo" type="email" placeholder="Correo Electrónico" name="_replyto">
-                    <textarea class="contacto__input contacto__input--mensaje"  placeholder="Mensaje" name="message"></textarea>
-                    <hr class="contacto__hr">
+                    <p class="contacto__subtitulo">Introduce tu información para poder contactarte de vuelta</p>
+                    <div class="contacto__informacion">
+                        <input class="contacto__input contacto__input--nombre" type="text" placeholder="Nombre" name="name">
+                        <input class="contacto__input contacto__input--correo" type="email" placeholder="Correo Electrónico" name="_replyto">
+                    </div>
+                    <textarea class="contacto__mensaje"  placeholder="Mensaje" name="message"></textarea>
+                    
+                    <div class="contacto__hr"></div>
                     <div class="contacto__submit">
-                        <input class="contacto__input contacto__input--enviar" type="submit" value="Enviar">
+                        <input class="contacto__enviar" type="submit" value="Enviar" title="Enviar información">
                         <a href="https://wa.link/s3afot" 
-                        target="_blank" class="contacto__boton">
+                        target="_blank" class="contacto__boton" title="Hablar mediante whatsapp">
                             <i class="fab fa-whatsapp contacto__whatsapp"></i>
                         </a>
                     </div>

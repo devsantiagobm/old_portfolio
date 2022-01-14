@@ -7,7 +7,6 @@
     --fuentedos: 'Nunito', sans-serif;
     --efectouno: brightness(200%);
     --efectodos: brightness(50%);
-    --efectotres: scale(1.1);
 }
 
 *,
@@ -194,13 +193,13 @@ body{
 .skills__imagenes{
     width: 90%;
     aspect-ratio: 1;
-    transition-property: transform, filter;
-    transition: .2s ease;
+    transition-property: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
 }
 
 .skills__imagenes:hover{
-    transform: var(--efectotres);
-    filter: saturate(200%);
+    transform: scale(1.08)
 }
 
 .skills__imagenes--illustrator:hover{
@@ -227,7 +226,7 @@ body{
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(275px, 312px));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 312px));
     column-gap: 30px;
     row-gap: 30px;
     justify-content: center;
@@ -372,128 +371,124 @@ body{
 .section__contacto{
     width: 100%;
     height: auto;
-    margin: 75px 0 0 0;
 }
 
 .contacto__formulario{
     width: 45%;
     height: auto;
-    border: solid 3px var(--coloruno);
-    border-radius: 10px;
     margin: auto;
     padding: 50px 30px;
-    background-color: var(--coloruno);
+    background-color: var(--colordos);
+    color: var(--coloruno);
+    font-family: var(--fuenteuno);
+    border: solid black 3px;
 }
 
 .contacto__titulo{
     font-family: var(--fuenteuno);
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 3px;
-    padding: 0 0 20px;
-    color: var(--colordos);
+    color: var(--coloruno);
 }
 
-.contacto__titulo::selection{
-    background-color: var(--colordos);
-    color: var(--coloruno);
+.contacto__subtitulo{
+    text-align: center;
+    margin: 10px 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contacto__informacion{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0 0;
 }
 
 .contacto__input{
-    font-size: var(--fuentedos);
-    display: block;
-    margin: 15px 0;
-    width: 100%;
-    padding: 5px 10px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: var(--coloruno);
-    color: var(--colordos);
-    transition: background .2s;
+    width: 48%;
     outline: none;
-    border:solid 1px var(--colordos); 
-}
-
-.contacto__input::placeholder{
-    color: var(--colordos);
-}
-
-.contacto__input:focus{
-    outline: solid 1px var(--coloruno);
+    border: none;
+    border-bottom: solid var(--coloruno) 3px;
+    padding: 0 5px 3px;
+    font-family: var(--fuenteuno);
+    font-size: 16px;
     background-color: var(--colordos);
-    color: var(--coloruno);
+    font-weight: 500;
 }
 
-.contacto__input:focus::placeholder{
-    color: rgb(156, 156, 156);
-    font-size: .9rem;
-}
-
-.contacto__input:focus::selection{
-    background-color: var(--coloruno);
-    color: var(--colordos);
-}
-
-.contacto__input--mensaje{
-    font-family: var(--fuentedos);
-    padding: 15px 10px;
-    height: 75px;
-    resize: none;
-}
-
-
-.contacto__hr{
-    border-radius: 5px;
-    margin: auto;
+.contacto__mensaje{
     width: 100%;
-    border: solid 1px var(--colordos);
+    background-color: var(--colordos);
+    border: solid var(--coloruno) 3px;
+    margin: 20px 0 0;
+    height: 100px;
+    padding: 15px 5px 15px 15px;
+    resize: none;
+    border-radius: 0px;
+    font-family: var(--fuenteuno);
+    font-weight: 500;
+}
+
+.contacto__input::placeholder,
+.contacto__mensaje::placeholder{
+    font-size: 15px;
+    font-weight: 400;
+}
+.contacto__hr{
+    width: 100%;
+    height: 3px;
+    background-color: var(--coloruno);
+    margin: 20px 0 0;
 }
 
 .contacto__submit{
     width: 100%;
     display: flex;
     align-items: center;
+    margin: 20px 0 0;
+}
+
+.contacto__enviar{
+    width: 87.3%;
     height: auto;
-    margin-top: 15px;
-}
-
-.contacto__input--enviar{
-    width: 90%;
     background-color: var(--colordos);
-    border: solid 2px var(--coloruno);
-    color: var(--coloruno);
-    border: solid 1px var(--colordos);
+    border: solid 3px var(--coloruno);
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
     cursor: pointer;
-    box-shadow: 0 0 0 var(--colordos);
-    transition-property: box-shadow, background-color, color;
-    margin: 0;
+    padding: 11px;
 }
 
-.contacto__input--enviar:hover, .contacto__input--enviar:focus{
-    background-color: var(--coloruno);
+.contacto__enviar:hover,
+.contacto__enviar:focus{
     color: var(--colordos);
-    outline: none;
-    box-shadow: 0 0 10px var(--colordos);
+    background-color: var(--coloruno);
 }
 
 .contacto__boton{
-    text-align: center;
+    height: auto;
+    margin: 0 0 0 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 5px;
+    border: solid black 3px;
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.contacto__boton:hover,
+.contacto__boton:focus{
+    background-color: black;
 }
 
 .contacto__whatsapp{
-    color: var(--coloruno);
-    font-size: 2.4rem;
-    aspect-ratio: 1;
-    text-align: right;
-    transition: background-color .5s ease;
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 0 0 0 15px;
-}
-
-.contacto__whatsapp:hover{
-    background-color: #25D366;
+    color: #25D366;
 }
 
 /*--------CONTENIDO DE LA PARTE INFERIOR DE LA WEB--------------------------------------------------------*/
@@ -583,6 +578,17 @@ body{
         row-gap: 10px;
     }
 
+    .contacto__informacion{
+        flex-direction: column;
+    }
+
+    .contacto__input{
+        width: 100%;
+    }
+
+    .contacto__input--correo{
+        margin: 20px 0 0 0;
+    }
     .contacto__formulario{
         width: 75%;
     }
@@ -608,7 +614,6 @@ body{
     }
 
     .section{
-        padding:100px 20px 20px 20px;
         padding: 150px 20px 100px;
     }
 
